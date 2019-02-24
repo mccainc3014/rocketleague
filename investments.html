@@ -1,0 +1,20 @@
+---
+layout: default
+title: NewSchool Venture Fund's Investments
+---
+<h2>NewSchool Venture Fund's Investments</h2>
+
+<!-- Organizations -->
+{% assign investments = site.data.investments %}
+{% assign investments = investments | sort:"Name" %}
+
+<!-- Document -->
+
+{% for investment in investments %}
+
+<ul>
+<li><strong>{{ investment.Name }}</strong> ({{ investment.Date }})</li>
+</ul>
+
+{% endfor %}
+
